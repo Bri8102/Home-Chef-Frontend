@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Home Chef</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Home Chef</h1>
+      <div id="form-buttons">
+        <button class="button" id="add-recipe" type="button" name="button">Click to add a recipe</button>
+        <span id="or"> or </span>
+        <button class="button" id="filter-button" type="button" name="button">Choose ingredient for random recipe</button>
+      </div>
+      <div id="filter-drop-down" class="hidden">
+        <h3>Get random recipe:</h3>
+        <select id="filter-dropdown">
+          <option value="" disabled selected>Select ingredient...</option>
+        </select>
+      </div>
+      <div class="form">
+        <form id="new-recipe-form" class="hidden">
+          <label for="recipe-title">Title</label><br>
+          <input type="text" name="recipe-title"><br>
+          <label for="image-url">Image Link</label><br>
+          <input type="text" name="image-url"><br>
+          <label for="recipe-url">Recipe Link</label><br>
+          <input type="text" name="recipe-url"><br>
+          <label for="ingredients">Ingredients</label><br>
+          <input type="text" name="ingredients" placeholder="Seperate ingredients with comma and a space...(eggs, bread, ...)"><br>
+          <input id="form-submit" type="submit" value="Add Recipe">
+        </form>
+      </div>
+      <div id="recipe-card-container">
+
+      </div>
+    </div>
+    <script type="application/javascript" src="src/components/recipe.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/recipes.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/ingredients.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/components/app.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/adapters/RecipesAdapter.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/adapters/IngredientsAdapter.js" charset="utf-8"></script>
+    <script type="application/javascript" src="src/index.js" charset="utf-8"></script>
+  </body>
+
+</html>
