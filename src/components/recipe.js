@@ -1,5 +1,5 @@
 class Recipe {
-    constructor(title, imageLink, recipeLink, ingredients) {
+    constructor(title, imageUrl, recipeUrl, ingredients) {
         this.title = title;
         this.imageUrl = imageUrl;
         this.recipeUrl = recipeUrl;

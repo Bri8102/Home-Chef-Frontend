@@ -48,7 +48,7 @@ class Recipes {
     createRecipes(recipes) {
         for (let recipe of recipes){
             let ingredients = this.createArrayOfRecipeIngredients(recipe.attributes.ingredients)
-            this.recipes.push(new Recipe(recipe.attributes.title, recipe.attributes.image_url), recipe.attributes.recipe_url, ingredients)
+            this.recipes.push(new Recipe(recipe.attributes.title, recipe.attributes.image_url, recipe.attributes.recipe_url, ingredients))
         }
     }
 
@@ -58,8 +58,8 @@ class Recipes {
        }
     }
 
-    addRecipe() {
-        const form = event.target.parentElement
+    addRecipe(e) {
+        const form = e.target.parentElement
         const ingredients = form[3].value.split(', ')
         const recipe = new Recipe(form[0].value, form[1].value, form[2].value, ingredients)
         const configurationObject = {
@@ -109,9 +109,9 @@ class Recipes {
         this.cardContainer.innerHTML = "";
       }
     
-      getAndLoadRandomRecipeByIngredient() {
+      getAndLoadRandomRecipeByIngredient(evt) {
         this.clearRecipes();
-        const ingredient = event.target.value
+        const ingredient = evt.target.value
         this.adapter.getRecipeByIngredient(ingredient).then(json => this.loadRandomRecipe(json.data.attributes))
       }
     
@@ -121,4 +121,3 @@ class Recipes {
         r.createRecipeCard();
       }
 }
-
