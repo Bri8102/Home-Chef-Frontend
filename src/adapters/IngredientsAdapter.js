@@ -6,4 +6,5 @@ class IngredientsAdapter {
     getIngredients() {
         return fetch(this.baseURL).then(response => response.json()).then(json => (json.data))
     }
+
 }

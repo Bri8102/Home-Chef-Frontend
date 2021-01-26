@@ -17,12 +17,14 @@ class Recipes {
     }
 
     bindEventListeners() {
-        this.formSubmit.addEventListener("click", function(e) {
-            e.preventDefault();
+        this.formSubmit.addEventListener("click", function(event) {
+          console.log(event)
+            event.preventDefault();
             this.addRecipe();
         }.bind(this))
 
-        this.addRecipeButton.addEventListener("click", function() {
+        this.addRecipeButton.addEventListener("click", function(e) {
+            console.log(e)
             this.toggleForm();
             this.toggleButtons();
         }.bind(this))
@@ -58,8 +60,11 @@ class Recipes {
        }
     }
 
-    addRecipe(e) {
-        const form = e.target.parentElement
+    addRecipe(event) {
+      debugger
+        const form = event.target.parentElement
+        console.log(target)
+        debugger
         const ingredients = form[3].value.split(', ')
         const recipe = new Recipe(form[0].value, form[1].value, form[2].value, ingredients)
         const configurationObject = {
@@ -109,9 +114,12 @@ class Recipes {
         this.cardContainer.innerHTML = "";
       }
     
-      getAndLoadRandomRecipeByIngredient(evt) {
+      getAndLoadRandomRecipeByIngredient(event) {
         this.clearRecipes();
-        const ingredient = evt.target.value
+        debugger
+        const ingredient = event.target.value
+        console.log(event)
+        debugger
         this.adapter.getRecipeByIngredient(ingredient).then(json => this.loadRandomRecipe(json.data.attributes))
       }
     
