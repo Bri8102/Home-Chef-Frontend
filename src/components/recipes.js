@@ -60,11 +60,13 @@ class Recipes {
        }
     }
 
-    addRecipe(event) {
+    addRecipe() {
       debugger
-        const form = event.target.parentElement
-        console.log(target)
+        // const form = event.target.parentElement
+        // console.log(target)
+        const form = this.formSubmit.parentElement;
         debugger
+        console.log(form)
         const ingredients = form[3].value.split(', ')
         const recipe = new Recipe(form[0].value, form[1].value, form[2].value, ingredients)
         const configurationObject = {
@@ -114,13 +116,14 @@ class Recipes {
         this.cardContainer.innerHTML = "";
       }
     
-      getAndLoadRandomRecipeByIngredient(event) {
+      getAndLoadRandomRecipeByIngredient() {
         this.clearRecipes();
         debugger
-        const ingredient = event.target.value
-        console.log(event)
+        // const ingredient = event.target.value
+        const ingredient = this.ingredientDropDown.value
+        console.log(ingredient)
         debugger
-        this.adapter.getRecipeByIngredient(ingredient).then(json => this.loadRandomRecipe(json.data.attributes))
+        this.adapter.getRecipeByIngredient(ingredient).then(json => this.loadRandomRecipe(json.data.attributes));
       }
     
       loadRandomRecipe(recipe) {
