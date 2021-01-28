@@ -39,7 +39,7 @@ class Recipe {
 
       var button = document.createElement('button')
       button.className = 'recipe-btn'
-      button.innerHTML = "Click Me"
+      button.innerHTML = "Likes"
       card.appendChild(button)
       var counterPlaceHolder = document.createElement("counter-placeholder");
       counterPlaceHolder.innerHTML = 0
