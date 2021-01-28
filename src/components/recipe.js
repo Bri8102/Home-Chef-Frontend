@@ -36,5 +36,32 @@ class Recipe {
       card.appendChild(cardInfo)
       card.appendChild(footer)
       document.getElementById('recipe-card-container').appendChild(card)
+
+      var button = document.createElement('button')
+      button.className = 'recipe-btn'
+      button.innerHTML = "Click Me"
+      card.appendChild(button)
+      var counterPlaceHolder = document.createElement("counter-placeholder");
+      counterPlaceHolder.innerHTML = 0
+      card.appendChild(counterPlaceHolder)
+
+      var x = 0
+      button.addEventListener("click", function() {
+        debugger
+        x++
+        counterPlaceHolder.innerHTML = x
+      } )
+
     }
+
+    
+
+    // addButton() {
+    //      // for each Recipe , create a button, and a number, click button, number increment by 1
+    //     const button = document.createElement('button')
+    //     button.className = 'recipe-btn'
+    //     ca
+    // }
+
+     
   }
