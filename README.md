@@ -1,5 +1,8 @@
 # Rails API with JavaScript Frontend
 
+# Home Chef 
+Recipe app allowing users find recipes based on listed ingredients as well as add recipes to the database
+
 ## Built With
 - Ruby
 - Rails and ActiveRecord
