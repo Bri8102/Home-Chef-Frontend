@@ -31,7 +31,8 @@ Frontend: (open html file)
 open index.html
 ```
 # Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
+Please contact me at boniruedwards@gmail.com
 
 # License
 <a href="https://choosealicense.com/licenses/mit/">MIT</a>
